@@ -6,6 +6,7 @@ import Biography from "./components/Biography";
 import "./App.scss";
 import Resources from "./components/Resources";
 import Schedule from "./components/Schedule";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
           <Schedule />
           <Resources />
           <ContactForm/>
-
+          <Footer />
       </div>
   );
 }

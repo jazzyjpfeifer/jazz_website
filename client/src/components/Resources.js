@@ -3,13 +3,20 @@ import {Container, ListGroup, ListGroupItem, Row, Col} from "react-bootstrap";
 
 class Resources extends Component {
     render() {
+        const resourceStyle = {
+            margin: "0 auto",
+            width: "40em",
+            padding: "10px",
+            position: "relative"
+        }
         return (
+
             <Container>
-                <Row className="text-center mt-5">
+                <Row className="text-center mt-3">
                     <h2>Learn to Play Jazz Piano</h2>
                     <p>Here are some good resources to get you started:</p>
                 </Row>
-                <Row>
+                <Row style={resourceStyle}>
                     <Col> <ListGroup className="p-3" variant="flush">
                         <ListGroupItem><a href="https://www.amazon.com/Jazz-Piano-Book-Mark-Levine-ebook/dp/B004KA9UWU">The
                             Jazz Piano Book</a> by Mark Levine</ListGroupItem>
