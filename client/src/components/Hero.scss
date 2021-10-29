@@ -1,0 +1,21 @@
+.hero {
+  min-height: 50vh;
+  background: #000 url("../assets/images/hero.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero:before {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+}
