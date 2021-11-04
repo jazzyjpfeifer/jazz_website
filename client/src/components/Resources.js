@@ -18,15 +18,14 @@ class Resources extends Component {
                 </Row>
                 <Row style={resourceStyle}>
                     <Col> <ListGroup className="p-3" variant="flush">
-                        <ListGroupItem><a href="https://www.amazon.com/Jazz-Piano-Book-Mark-Levine-ebook/dp/B004KA9UWU">The
+                        <ListGroupItem><a className="link-primary" href="https://www.amazon.com/Jazz-Piano-Book-Mark-Levine-ebook/dp/B004KA9UWU">The
                             Jazz Piano Book</a> by Mark Levine</ListGroupItem>
-                        <ListGroupItem><a
-                            href="https://www.amazon.com/How-Play-Bebop-Vol-1/dp/0739020404/ref=sr_1_1?crid=302AK48D41UPG&dchild=1&keywords=david+baker+jazz&qid=1623184684&s=books&sprefix=David+Baker+%2Caps%2C195&sr=1-1">How
+                        <ListGroupItem><a className="link-primary" href="https://www.amazon.com/How-Play-Bebop-Vol-1/dp/0739020404/ref=sr_1_1?crid=302AK48D41UPG&dchild=1&keywords=david+baker+jazz&qid=1623184684&s=books&sprefix=David+Baker+%2Caps%2C195&sr=1-1">How
                             to Play Bebop</a> by David Baker</ListGroupItem>
-                        <ListGroupItem><a
+                        <ListGroupItem><a className="link-primary"
                             href="https://www.amazon.com/Voicings-Jazz-Keyboard-Frank-Mantooth/dp/0793534852/ref=sr_1_2?crid=18IH64NKEYW7N&dchild=1&keywords=frank+mantooth+jazz+piano+voicings&qid=1623185600&sprefix=Frank+Mantooth+piano+voi%2Caps%2C190&sr=8-2">Voicings
                             for Jazz Keyboard</a> by Frank Mantooth</ListGroupItem>
-                        <ListGroupItem><a href="https://www.jazzbooks.com/">jazzbooks.com</a> Abersold
+                        <ListGroupItem><a className="link-primary" href="https://www.jazzbooks.com/">jazzbooks.com</a> Abersold
                             Play-A-Longs</ListGroupItem>
                     </ListGroup></Col>
                 </Row>
