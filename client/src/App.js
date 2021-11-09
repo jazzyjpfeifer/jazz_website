@@ -7,6 +7,7 @@ import "./App.scss";
 import Resources from "./components/Resources";
 import Schedule from "./components/Schedule";
 import Footer from "./components/Footer";
+import ScrollButton from "./components/ScrollButton";
 
 
 function App() {
@@ -14,11 +15,13 @@ function App() {
       <div className='App'>
           <TopNavbar />
           <Hero />
+          <ScrollButton />
           <Biography/>
           <Schedule />
           <Resources />
           <ContactForm/>
           <Footer />
+
       </div>
   );
 }

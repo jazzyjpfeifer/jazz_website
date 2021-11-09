@@ -1,88 +1,60 @@
-import React, {Component} from 'react';
-import {Col, Container, Row, Stack} from "react-bootstrap";
-import {BsClock, BsFillCalendarEventFill, GoLocation} from "react-icons/all";
+import React, {useState} from 'react';
+import {Accordion, Col, Container, Row, Stack} from "react-bootstrap";
+import AccordionItem from "react-bootstrap/AccordionItem";
+import ScheduleItems from "./ScheduleItems";
+import ScheduleMonths from "./ScheduleMonths";
 
-const Gigs = {
-    1: {
-        group: "Glenn Web - Jazz All Stars",
-        date: "November 5, 2021",
-        time: "8:00 - 11:00 PM",
-        location: "Blues N' Katz - St. George, UT 84770"
-    },
-    2: {
-        group: "Rebel Jazz Band w/ Kenny Rampton",
-        date: "November 6, 2021",
-        time: "7:30 PM",
-        location: "DSU - Eccles Fine Arts Center"
-    },
-    3: {
-        group: "Glenn Web - Jazz All Stars",
-        date: "November 12, 2021",
-        time: "8:00 - 11:00 PM",
-        location: "Blues N' Katz - St. George, UT 84770"
-    },
-    4: {
-        group: "Glenn Web - Jazz All Stars",
-        date: "November 20th, 2021",
-        time: "5:30 PM",
-        location: "Private Event"
-    }
-}
+
+const MONTHS = [
+    {id: "month-0", month_name: "January"},
+    {id: "month-1", month_name: "February"},
+    {id: "month-2", month_name: "March"},
+    {id: "month-3", month_name: "April"},
+    {id: "month-4", month_name: "May"},
+    {id: "month-5", month_name: "June"},
+    {id: "month-6", month_name: "July"},
+    {id: "month-7", month_name: "August"},
+    {id: "month-8", month_name: "September"},
+    {id: "month-9", month_name: "October"},
+    {id: "month-10", month_name: "November"},
+    {id: "month-11", month_name: "December"}
+]
 
 const gigsStyle = {
     margin: "0 auto",
-    width: "30em",
+    width: "40em",
     padding: "10px"
 }
-const icon = {
-    fontSize: "20px",
-    marginRight: "10px"
-}
-const gigsInfo = {
-    borderBottom: "solid 1px black",
-    width: "60%",
-    justifyContent: "center",
-    margin: "1.5em auto"
-}
-
-class Schedule extends Component {
-
-    renderGigs(){
-        return Object.entries(Gigs).map(([key, value], i) => {
-            return (
-                <Stack key={{key}} className="mb-3 mt-3">
-                    <h6>{value.group}</h6>
-                    <div><BsFillCalendarEventFill  style={icon}/>{value.date}</div>
-                    <div><BsClock style={icon}/> {value.time}</div>
-                    <div><GoLocation style={icon}/>{value.location}</div>
-                    <div style={gigsInfo}/>
-                </Stack>
-            )
-        })
-    }
-
-    render() {
 
 
-        return (
+function Schedule(props) {
+    const [months, setActive] = useState(MONTHS);
+
+    return (
+        <Container>
+            <Row className="text-center">
+                <Col>
+                    <h2>Upcoming Gigs</h2>
+                </Col>
+            </Row>
             <Container>
-                <Row className="text-center">
-                    <Col>
-                        <h2>Upcoming Gigs</h2>
-                    </Col>
+                <Row style={gigsStyle}>
+                    <Stack>
+                        <Accordion style={gigsStyle}>
+                                <div>
+                                {months
+                                    .map(month => {
+                                        return (
+                                            <ScheduleMonths eventKey={month} month={month} />
+                                        )
+                                    })}
+                                </div>
+                        </Accordion>
+                    </Stack>
                 </Row>
-                <Container>
-                    <Row style={gigsStyle}>
-                        <Stack>
-                            {this.renderGigs()}
-                        </Stack>
-                    </Row>
-                </Container>
-
-
             </Container>
-        );
-    }
+        </Container>
+    );
 }
 
 export default Schedule;

@@ -1,10 +1,13 @@
 
 /* make the customizations */
 $theme-colors: (
-        "primary": #409ff5
+        "primary": #409ff5,
+        "dark": #383838
 );
 
 $body-color: #383838;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "../../node_modules/animate.css/animate.min.css";
 

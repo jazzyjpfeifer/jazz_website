@@ -16,7 +16,7 @@ class Resources extends Component {
                     <h2>Learn to Play Jazz Piano</h2>
                     <p>Here are some good resources to get you started:</p>
                 </Row>
-                <Row style={resourceStyle}>
+                <Row style={resourceStyle} xs={12}>
                     <Col> <ListGroup className="p-3" variant="flush">
                         <ListGroupItem><a className="link-primary" href="https://www.amazon.com/Jazz-Piano-Book-Mark-Levine-ebook/dp/B004KA9UWU">The
                             Jazz Piano Book</a> by Mark Levine</ListGroupItem>

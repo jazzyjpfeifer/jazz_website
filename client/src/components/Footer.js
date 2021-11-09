@@ -17,7 +17,7 @@ class Footer extends Component {
             <Container fluid style={footerStyle}>
                 <Row>
                     <h2 className="mt-5">Justin Pfeifer</h2>
-                    <p>Jazz Pianist</p>
+                    <p>Musician - Jazz Pianist, Organist, Composer & Arranger</p>
                 </Row>
                 <Row className="mt-5" style={socialStyle}>
                     <Col>Follow me on: <BsFacebook/> <BsTwitter /> <BsInstagram/></Col>
