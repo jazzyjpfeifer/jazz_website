@@ -5,9 +5,9 @@ import ContactForm from "./components/ContactForm";
 import Biography from "./components/Biography";
 import "./App.scss";
 import Resources from "./components/Resources";
-import Schedule from "./components/Schedule";
 import Footer from "./components/Footer";
 import ScrollButton from "./components/ScrollButton";
+import GigsContainer from "./components/GigsContainer";
 
 
 function App() {
@@ -17,11 +17,10 @@ function App() {
           <Hero />
           <ScrollButton />
           <Biography/>
-          <Schedule />
+          <GigsContainer />
           <Resources />
           <ContactForm/>
           <Footer />
-
       </div>
   );
 }

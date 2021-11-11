@@ -4,7 +4,7 @@ import {Container, Row} from "react-bootstrap";
 class Biography extends Component {
     render() {
         return (
-            <Container className="mt-5">
+            <Container className="mt-5" id="bio">
                 <h2 className="text-center mb-4">Biography</h2>
                 <Row>
                     <p>Justin has performed professionally in the music scene for many years.  He is diverse in many musical idioms which include: jazz, funk, blues, rock, and even classical.  Growing up in the Roaring Fork area near Aspen/Snowmass

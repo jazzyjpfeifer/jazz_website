@@ -1,11 +1,21 @@
 
 /* make the customizations */
+$primary: #409ff5;
+$dark: #383838;
+$light: #ececec;
+
 $theme-colors: (
-        "primary": #409ff5,
-        "dark": #383838
+        "primary": $primary,
+        "dark": $dark,
+        "light": $light
 );
 
-$body-color: #383838;
+$body-color: $dark;
+
+$accordion-button-active-bg: $dark;
+$accordion-button-active-color: $light;
+$accordion-button-focus-border-color: #000;
+$accordion-button-focus-box-shadow: 0;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
