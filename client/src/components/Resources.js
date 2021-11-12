@@ -11,7 +11,7 @@ class Resources extends Component {
         }
         return (
 
-            <Container>
+            <Container id="learn">
                 <Row className="text-center mt-3">
                     <h2>Learn to Play Jazz Piano</h2>
                     <p>Here are some good resources to get you started:</p>

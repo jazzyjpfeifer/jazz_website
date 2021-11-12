@@ -4,8 +4,6 @@ import NavbarToggle from "react-bootstrap/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/NavbarCollapse";
 import "./TopNavBar.scss"
 
-
-
 function TopNavbar() {
     useEffect(() => {
         let url = window.location.href.split("/");
@@ -13,6 +11,12 @@ function TopNavbar() {
         let element = document.getElementById(target);
         element && element.scrollIntoView({ behavior: "smooth", block: "start" });
     }, []);
+
+    function ScrollNavbar(menu_item) {
+        let link = document.getElementById(menu_item);
+        link && link.scrollIntoView({behavior: "smooth", block:"start"});
+        window.history.pushState(link.id, link.id, "/" + String(link.id))
+    }
 
         return (
             <Navbar variant="dark" expand="lg" className="color-nav">
@@ -23,14 +27,25 @@ function TopNavbar() {
                         <Nav className="me-auto">
                             <NavLink href="#bio"
                                      onClick={e => {
-                                         let bio = document.getElementById("bio");
                                          e.preventDefault();
-                                         bio && bio.scrollIntoView({behavior:"smooth", block:"start"});
-                                         window.history.pushState("bio", "bio", "/bio");
+                                         ScrollNavbar("bio")
                             }}>Bio</NavLink>
-                            <NavLink href="#gigs">Gigs</NavLink>
-                            <NavLink href="#learn">Learn</NavLink>
-                            <NavLink href="#contact">Contact</NavLink>
+                            <NavLink href="#gigs"
+                                     onClick={e => {
+                                         e.preventDefault();
+                                         ScrollNavbar("gigs")
+                                     }}>Gigs</NavLink>
+                            <NavLink href="#learn"
+                                     onClick={e => {
+                                         e.preventDefault();
+                                         ScrollNavbar("learn")
+                                     }}>Learn</NavLink>
+                            <NavLink href="#contact"
+                                     onClick={e => {
+                                         e.preventDefault();
+                                         ScrollNavbar("contact")
+                                     }}
+                            >Contact</NavLink>
                         </Nav>
                     </NavbarCollapse>
             </Container>

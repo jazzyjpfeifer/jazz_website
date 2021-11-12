@@ -24,7 +24,7 @@ const ContactForm = () => {
         alert(result.status);
     };
     return (
-        <Container className="mt-5 mb-5">
+        <Container className="mt-5 mb-5" id="contact">
             <h2 className="text-center">Contact Me</h2>
             <Form onSubmit={handleSubmit} className="col-md-5 mx-auto">
                 <Stack gap={2}>

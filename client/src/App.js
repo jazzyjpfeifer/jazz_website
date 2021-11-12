@@ -12,7 +12,7 @@ import GigsContainer from "./components/GigsContainer";
 
 function App() {
   return (
-      <div className='App'>
+      <div className='App' id="/">
           <TopNavbar />
           <Hero />
           <ScrollButton />

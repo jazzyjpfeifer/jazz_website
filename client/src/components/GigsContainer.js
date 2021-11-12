@@ -13,7 +13,7 @@ const gigsStyle = {
 function GigsContainer() {
 
         return (
-            <Container>
+            <Container id="gigs">
                 <Row className="text-center">
                     <Col>
                         <h2>Upcoming Gigs</h2>

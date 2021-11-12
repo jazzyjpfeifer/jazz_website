@@ -22,6 +22,7 @@ const ScrollButton = () => {
                     top: 0,
                     behavior:"smooth"
                 });
+                window.history.pushState("", "", "/");
             };
 
             window.addEventListener('scroll', toggleVisible);
