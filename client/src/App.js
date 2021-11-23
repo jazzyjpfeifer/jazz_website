@@ -8,21 +8,32 @@ import Resources from "./components/Resources";
 import Footer from "./components/Footer";
 import ScrollButton from "./components/ScrollButton";
 import GigsContainer from "./components/GigsContainer";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 
 function App() {
-  return (
-      <div className='App' id="/">
-          <TopNavbar />
-          <Hero />
-          <ScrollButton />
-          <Biography/>
-          <GigsContainer />
-          <Resources />
-          <ContactForm/>
-          <Footer />
-      </div>
-  );
+    const [data, setData] = useState(null)
+
+    useEffect(() => {
+        axios.get('http://localhost:5000')
+            .then(response => setData(response.data))
+        console.log(data)
+    })
+
+
+        return (
+            <div className='App' id="/">
+                <TopNavbar/>
+                <Hero/>
+                <ScrollButton/>
+                <Biography/>
+                <GigsContainer/>
+                <Resources/>
+                <ContactForm/>
+                <Footer/>
+            </div>
+        );
 }
 
-export default App;
+    export default App;

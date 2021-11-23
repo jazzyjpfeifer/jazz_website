@@ -13,23 +13,25 @@ const gigsInfo = {
     margin: "1.5em auto"
 }
 
-const Gig = ({gig}) => {
-    const [hasGigs] = useState(gig);
+const Gig = ({event}) => {
+    const [hasEvent] = useState(event);
 
-    if(hasGigs){
+    if(hasEvent){
         return (
             <AccordionBody>
                 <h5>
-                    {gig.group}
+                    {event.event_name}
                 </h5>
                 <div><BsFillCalendarEventFill style={icon}/>
-                    {gig.date_text}
+                    {event.event_date_formatted}
                 </div>
                 <div><BsClock style={icon}/>
-                    {gig.time}
+                    {event.start_time} - {event.end_time}
                 </div>
                 <div><GoLocation style={icon}/>
-                    {gig.location}
+                    <div>{event.venue}</div>
+                    <div>{event.location}</div>
+
                 </div>
                 <div style={gigsInfo}/>
             </AccordionBody>
@@ -38,7 +40,7 @@ const Gig = ({gig}) => {
         return (
             <AccordionBody>
                 <h5>
-                    No Gig
+                    No Gigs
                 </h5>
             </AccordionBody>
         )

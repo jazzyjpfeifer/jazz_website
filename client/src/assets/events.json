@@ -1,0 +1,62 @@
+[
+  {
+    "id": "0u3ui6dms2vnq9enj3ruv31cei",
+    "event_name": "Glenn Webb & the Jazz All-stars",
+    "event_start_time": "2021-11-05T20:00:00-06:00",
+    "event_end_time": "2021-11-05T23:00:00-06:00",
+    "start_time": "8:00 PM",
+    "end_time": "11:00 PM",
+    "event_date_formatted": "November 5th 2021",
+    "event_date": "2021-11-05",
+    "month_name": "November",
+    "month": "11",
+    "location": "307 N. Bluff, St. George, UT 84770, USA",
+    "venue": "Blues Katz Rock n Roll Gril",
+    "status": "confirmed"
+  },
+  {
+    "id": "43787srrnl5r24iofkgfg1riit",
+    "event_name": "Rebel Jazz Band w/ Kenny Rampton",
+    "event_start_time": "2021-11-06T19:30:00-06:00",
+    "event_end_time": "2021-11-06T21:00:00-06:00",
+    "start_time": "7:30 PM",
+    "end_time": "9:00 PM",
+    "event_date_formatted": "November 6th 2021",
+    "event_date": "2021-11-06",
+    "month_name": "November",
+    "month": "11",
+    "location": "225 S 700 E, St. George, UT 84770, USA",
+    "venue": "Dixie State University",
+    "status": "confirmed"
+  },
+  {
+    "id": "6oe22bvgcmhckkg9kj9bi3jfsg",
+    "event_name": "Glenn Webb & the Jazz All-stars",
+    "event_start_time": "2021-11-12T20:00:00-07:00",
+    "event_end_time": "2021-11-12T23:00:00-07:00",
+    "start_time": "8:00 PM",
+    "end_time": "11:00 PM",
+    "event_date_formatted": "November 12th 2021",
+    "event_date": "2021-11-12",
+    "month_name": "November",
+    "month": "11",
+    "location": "307 N. Bluff, St. George, UT 84770, USA",
+    "venue": "Blues Katz Rock n Roll Grill",
+    "status": "confirmed"
+  },
+  {
+    "id": "54vjsd2j40q57c5uufuqq8tseg",
+    "event_name": "Glenn Web & the Jazz All-stars",
+    "event_start_time": "2021-11-20T17:30:00-07:00",
+    "event_end_time": "2021-11-20T21:00:00-07:00",
+    "start_time": "5:30 PM",
+    "end_time": "9:00 PM",
+    "event_date_formatted": "November 20th 2021",
+    "event_date": "2021-11-20",
+    "month_name": "November",
+    "month": "11",
+    "location": "Springdale, UT, USA",
+    "venue": "Private Event",
+    "status": "confirmed"
+  }
+]
