@@ -35,6 +35,11 @@ function TopNavbar() {
                                          e.preventDefault();
                                          ScrollNavbar("gigs")
                                      }}>Gigs</NavLink>
+                            <NavLink href="#gallery"
+                                     onClick={e => {
+                                         e.preventDefault();
+                                         ScrollNavbar("gallery")
+                                     }}>Gallery</NavLink>
                             <NavLink href="#learn"
                                      onClick={e => {
                                          e.preventDefault();

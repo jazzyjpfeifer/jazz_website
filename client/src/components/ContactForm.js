@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import {Button, Container, Form, FormControl, FormGroup, FormLabel, Stack} from "react-bootstrap";
+import {Button, Form, FormControl, FormGroup, FormLabel, Stack} from "react-bootstrap";
+import ContactAlert from "./ContactAlert";
+
 
 const ContactForm = () => {
     const [status, setStatus] = useState("Send");
+    const [isSent, setEmailSent] = useState(false);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("Sending...");
@@ -17,38 +21,41 @@ const ContactForm = () => {
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
             },
-            body: JSON.stringify(details),
+            body: JSON.stringify(details)
         });
         setStatus("Submit");
-        let result = await response.json();
-        alert(result.status);
+        setEmailSent(true);
+
     };
-    return (
-        <Container className="mt-5 mb-5" id="contact">
-            <h2 className="text-center">Contact Me</h2>
+
+    if (!isSent) {
+        return (
             <Form onSubmit={handleSubmit} className="col-md-5 mx-auto">
                 <Stack gap={2}>
-                <FormGroup >
-                    <FormLabel htmlFor="name">Name:</FormLabel>
-                    <FormControl type="text" id="name" required/>
-                </FormGroup>
-                <FormGroup>
-                    <FormLabel htmlFor="email">Email:</FormLabel>
-                    <FormControl type="email" id="email" required/>
-                </FormGroup>
-                <FormGroup>
-                    <FormLabel htmlFor="message">Message:</FormLabel>
-                    <FormControl as="textarea" placeholder="Enter your message here" id="message" style={{height: `100px`}} required/>
-                </FormGroup>
-
-                    <Button className="text-center col-md-5 mx-auto" variant="primary" type="submit">{status}</Button>
+                    <FormGroup>
+                        <FormLabel htmlFor="name">Name:</FormLabel>
+                        <FormControl type="text" id="name" required/>
+                    </FormGroup>
+                    <FormGroup>
+                        <FormLabel htmlFor="email">Email:</FormLabel>
+                        <FormControl type="email" id="email" required/>
+                    </FormGroup>
+                    <FormGroup>
+                        <FormLabel htmlFor="message">Message:</FormLabel>
+                        <FormControl as="textarea" placeholder="Enter your message here" id="message"
+                                     style={{height: `100px`}} required/>
+                    </FormGroup>
+                    <Button className="text-center col-md-5 mx-auto" variant="primary"
+                            type="submit">{status}</Button>
                 </Stack>
-
             </Form>
+        )
+    } else {
+        return (
+            <ContactAlert />
+        )
 
-
-        </Container>
-    );
+    }
 };
 
 export default ContactForm;

@@ -43,17 +43,20 @@ transporter.verify((err, success) => {
 router.post('/contact', (req, res) => {
     console.log("Getting Post from contact form");
     let name = req.body.name
-    let subject = req.body.subject
+    let email = req.body.email
+    let subject = name
     let message = req.body.message
 
-    let mail = {
-        from: name,
+    const mailOptions = {
         to: process.env.EMAIL,
+        from: email,
         subject: subject,
         text: message
     }
 
-    transporter.sendMail(mail, (err) => {
+    console.log(mailOptions);
+
+    transporter.sendMail(mailOptions, (err) => {
         if (err) {
             res.json({
                 status: 'fail'
@@ -123,7 +126,7 @@ function listEvents(auth) {
              });
             console.log(calendar_data)
             //write the file
-            fs.writeFile('../client/src/assets/events.json', JSON.stringify(calendar_data, null, 2), err => {
+            fs.writeFile('../jazz_website/client/src/assets/events.json', JSON.stringify(calendar_data, null, 2), err => {
                 if(err) {
                     console.log(err)
                 } else {

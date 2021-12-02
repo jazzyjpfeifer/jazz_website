@@ -1,7 +1,6 @@
 import './App.scss';
 import TopNavbar from "./components/TopNavbar";
 import Hero from "./components/Hero";
-import ContactForm from "./components/ContactForm";
 import Biography from "./components/Biography";
 import "./App.scss";
 import Resources from "./components/Resources";
@@ -10,6 +9,8 @@ import ScrollButton from "./components/ScrollButton";
 import GigsContainer from "./components/GigsContainer";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Gallery from "./components/Gallery";
+import ContactFormContainer from "./components/ContactFormContainer";
 
 
 function App() {
@@ -29,8 +30,9 @@ function App() {
                 <ScrollButton/>
                 <Biography/>
                 <GigsContainer/>
+                <Gallery />
                 <Resources/>
-                <ContactForm/>
+                <ContactFormContainer />
                 <Footer/>
             </div>
         );
