@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import {Alert, Button, Row} from "react-bootstrap";
-import ContactForm from "./ContactForm";
+import React from 'react';
+import {Alert, Row} from "react-bootstrap";
 
 function ContactAlert() {
 

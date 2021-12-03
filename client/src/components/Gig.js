@@ -6,12 +6,6 @@ const icon = {
     fontSize: "20px",
     marginRight: "10px"
 }
-const gigsInfo = {
-    borderBottom: "solid 1px black",
-    width: "60%",
-    justifyContent: "center",
-    margin: "1.5em auto"
-}
 
 const gigsList = {
     padding: "0",
