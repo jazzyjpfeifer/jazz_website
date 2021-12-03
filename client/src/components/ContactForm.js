@@ -23,6 +23,7 @@ const ContactForm = () => {
             },
             body: JSON.stringify(details)
         });
+        console.log(response);
         setStatus("Submit");
         setEmailSent(true);
 
